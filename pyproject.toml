@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sec-pit-facts"
+version = "0.1.0"
+description = "Filing-date-aware extraction of SEC XBRL company facts"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+sec-pit-facts = "sec_pit_facts.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
